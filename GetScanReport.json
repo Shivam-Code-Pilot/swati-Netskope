@@ -27,13 +27,7 @@
           }
         ]
       },
-      {
-        "name": "showReport",
-        "onEnter": [
-          "say 'Here is your scan summary: {{event.state.report}}'"
-        ],
-        "next": []
-      }
+      
     ]
   }
 }
