@@ -1,0 +1,39 @@
+{
+  "version": "0.1",
+  "name": "GetScanReport",
+  "flow": {
+    "nodes": [
+      {
+        "name": "entry",
+        "onEnter": [
+          "say #builtin_text-Welcome"
+        ],
+        "next": [
+          {
+            "condition": "true",
+            "node": "getReport"
+          }
+        ]
+      },
+      {
+        "name": "getReport",
+        "onEnter": [
+          "runAction 'getQualysReport'"
+        ],
+        "next": [
+          {
+            "condition": "true",
+            "node": "showReport"
+          }
+        ]
+      },
+      {
+        "name": "showReport",
+        "onEnter": [
+          "say 'Here is your scan summary: {{event.state.report}}'"
+        ],
+        "next": []
+      }
+    ]
+  }
+}
